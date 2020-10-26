@@ -3,3 +3,7 @@ ng new App --style=css --routing
 'ng serve'
 
 visit website on http://localhost:4200
+
+login and password:
+admin admin
+user user
