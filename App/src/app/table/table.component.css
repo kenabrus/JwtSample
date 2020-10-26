@@ -1,0 +1,23 @@
+table{
+    border-style: solid;
+    border-width: 2px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: lemonchiffon;
+}
+.row{
+    border-width: 1px;
+    border-bottom: solid;
+    margin: 0;
+}
+.row_h{
+    border-width: 1px;
+    border-bottom: solid;
+    margin: 0;
+}
+.row:hover{
+    background-color: khaki;
+}
+th{
+    margin: 0;
+}

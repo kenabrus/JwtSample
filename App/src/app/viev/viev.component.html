@@ -1,0 +1,13 @@
+<div class="view-header">
+    <button (click)=table() type="button" class="btn">Tabelka</button>
+    <button (click)=tiless() type="button" class="btn">Kafelki</button>
+    <button (click)=logOut() type="button" class="btn">Wyloguj</button>
+    <button *ngIf="role" routerLink="/new_letter" type="button" class="btn">Dodaj nowy</button>
+</div>
+
+<div *ngIf="tiles==false">
+    <app-table (info)=getinfo($event)></app-table>
+</div>
+<div *ngIf="tiles==true">
+    <app-tile (info)=getinfo($event)></app-tile>
+</div>

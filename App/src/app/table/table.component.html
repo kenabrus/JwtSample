@@ -1,0 +1,30 @@
+<div class="filters" style="display: inline-flexbox;">
+    <button (click)="downloadCSV()" class="btn-default">Download CSV</button>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <span>
+      <label for="sort">Sortuj:</label>
+      <select name="Sortowanie" id="sort" formControlName="sort">
+        <option value="asc">Character rosnąco</option>
+        <option value="desc">Character malejąco</option>
+      </select>
+    </span>
+        <input type="submit" value="Sotruj" />
+    </form>
+
+    <button (click)=clear() type="button" class="btn">Czysc sortowanie</button>
+</div>
+
+<table>
+    <tr>
+        <th class="row_h">Image</th>
+        <th class="row_h">Character</th>
+        <th class="row_h">Description</th>
+        <th class="row_h"></th>
+    </tr>
+    <tr *ngFor="let letter of letters" class="row" [routerLink]="['/letters', letter.id]">
+        <th class="row"><img [src]=letter.imagePath></th>
+        <th class="row">{{letter.character}}</th>
+        <th class="row">{{letter.description}}</th>
+        <th class="row"><br> <button class="btn" *ngIf="role" [routerLink]="['/delete_letter', letter.id]">X</button></th>
+    </tr>
+</table>

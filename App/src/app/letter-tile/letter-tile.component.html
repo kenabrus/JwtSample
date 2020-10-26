@@ -1,0 +1,8 @@
+<body>
+    <div id="hero">
+        <p style="text-align: center;"><img [src]=letter.imagePath></p>
+        <p>Character: {{letter.character}}</p>
+        <p>Profesja: {{letter.description}}</p>
+        <button *ngIf="role" [routerLink]="['/delete_letter', letter.id]">X</button>
+    </div>
+</body>

@@ -1,0 +1,20 @@
+<div class="filters">
+    <button (click)="downloadCSV()" class="btn-default">Download CSV</button>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <span>
+      <label for="sort">Sortuj:</label>
+      <select name="Sortowanie" id="sort" formControlName="sort">
+        <option value="asc">Character rosnąco</option>
+        <option value="desc">Character malejąco</option>
+      </select>
+    </span>
+        <input type="submit" value="Sotruj" />
+    </form>
+    <button (click)=clear() type="button" class="btn">Czysc sortowanie</button>
+</div>
+
+
+
+<span *ngFor="let lett of letters, let i=index" [routerLink]="['/letters', lett.id]">
+    <app-letter-tile [letter]=lett id="tile"></app-letter-tile>
+</span>

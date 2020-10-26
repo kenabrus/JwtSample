@@ -1,0 +1,5 @@
+ng new App --style=css --routing
+'ng build' or 'ng build --prod'
+'ng serve'
+
+visit website on http://localhost:4200

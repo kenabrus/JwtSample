@@ -1,0 +1,35 @@
+<div>
+    <form class="loginForm" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div>
+            <h2 class="form-signin-heading">Login</h2>
+            <div *ngIf="invalidLogin" class="alert alert-danger">Invalid login or password.</div>
+            <div>
+
+            </div>
+            <table class="center">
+                <tr>
+                    <td>
+                        <label for="login" class="sr-only">Login</label>
+                    </td>
+                    <td>
+                        <input type="login" id="login" name="login" ngModel class="form-control" placeholder="Login" required autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password" class="sr-only">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </form>
+</div>

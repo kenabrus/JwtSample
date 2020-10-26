@@ -1,0 +1,9 @@
+<body>
+    <button value="Strona Główna" routerLink="/letters">Strona Główna</button>
+    <div id="letter" *ngIf="load">
+        <p><img [src]=letter.imagePath></p>
+        <p>Character: {{letter.character}}</p>
+        <p>Description: {{letter.description}}</p>
+        <button *ngIf="role" value="Edit element" [routerLink]="['/edit_letter', letter.id]">Edit</button>
+    </div>
+</body>

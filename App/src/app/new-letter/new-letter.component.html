@@ -1,0 +1,28 @@
+<button value="Strona Główna" routerLink="/letters">Strona główna</button><br>
+<p>DODAWANIE NOWEGO ELEMENTU</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="character">Character</label>
+        <input id="character" type="text" formControlName="character">
+    </div>
+
+    <div>
+        <label for="description">Description</label>
+        <textarea id="description" rows="5" formControlName="description">
+
+    </textarea>
+    </div>
+
+    <div>
+        <label for="imagePath">Image</label>
+        <select id="imagePath" formControlName="imagePath">
+      <option value="../../assets/img_2.jpg">A</option>
+      <option value="../../assets/img_3.jpg">B</option>
+      <option value="../../assets/img_4.jpg">C</option>
+      <option value="../../assets/img_5.jpg">D</option>
+      <option value="../../assets/img_6.jpg">E</option>
+  </select>
+    </div>
+
+    <input type="submit" value="Dodaj" />
+</form>
